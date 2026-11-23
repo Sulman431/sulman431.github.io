@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sulman Malik | Engineering leader, AI and mobile</title>
+<meta name="description" content="Sulman Malik is a Tech Lead and Engineering Manager in Lahore, building AI-powered products on mobile. Published ML researcher with 10+ years in software.">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1b1f24;
+    --muted: #5b6470;
+    --line: #e2ddd3;
+    --accent: #0f5c5c;
+    --accent-soft: #e3efee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161a;
+      --surface: #1a2026;
+      --ink: #edeae4;
+      --muted: #a2abb5;
+      --line: #2b333b;
+      --accent: #6cc5bf;
+      --accent-soft: #1d3334;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  header.top {
+    border-bottom: 1px solid var(--line);
+  }
+  header.top .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .brand { font-weight: 700; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+  }
+  nav a:hover, nav a:focus { color: var(--accent); }
+
+  .hero { padding: 84px 0 56px; }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.12;
+    margin: 0 0 22px;
+    max-width: 780px;
+  }
+  .lede { font-size: 20px; color: var(--muted); max-width: 640px; margin: 0 0 32px; }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 6px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+  }
+  .btn.ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 26px 0;
+  }
+  .stat { width: 25%; padding-right: 16px; }
+  .stat b {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.1;
+  }
+  .stat span { color: var(--muted); font-size: 14px; }
+
+  section { padding: 64px 0 0; }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0 0 22px;
+  }
+  .about p { max-width: 680px; margin: 0 0 16px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 18px;
+  }
+  .card .tag {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .card h3 { font-size: 22px; line-height: 1.3; margin: 0 0 10px; }
+  .card p { margin: 0 0 10px; color: var(--muted); }
+  .card p.result { color: var(--ink); margin-bottom: 0; }
+  .card p.result b { color: var(--accent); }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+  .row:last-child { border-bottom: 1px solid var(--line); }
+  .row .when { width: 190px; color: var(--muted); font-size: 15px; padding-top: 2px; }
+  .row .what { flex: 1; min-width: 260px; }
+  .row .what b { display: block; }
+  .row .what span { color: var(--muted); font-size: 15px; }
+
+  .paper {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 20px;
+    max-width: 700px;
+  }
+  .paper p { margin: 0 0 6px; }
+  .paper .meta { color: var(--muted); font-size: 15px; }
+
+  .skills { display: flex; flex-wrap: wrap; margin: 0 -10px; }
+  .skills div { width: 33.33%; padding: 0 10px 18px; }
+  .skills b { display: block; margin-bottom: 4px; }
+  .skills span { color: var(--muted); font-size: 15px; }
+
+  ul.topics { margin: 0 0 16px; padding-left: 20px; max-width: 680px; }
+  ul.topics li { margin-bottom: 6px; }
+
+  .contact {
+    margin-top: 64px;
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 40px 32px;
+  }
+  .contact h2 { margin-bottom: 10px; }
+  .contact p { margin: 0 0 22px; max-width: 560px; }
+
+  footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 700px) {
+    body { font-size: 16px; }
+    h1 { font-size: 36px; }
+    .hero { padding: 56px 0 40px; }
+    .lede { font-size: 18px; }
+    nav { width: 100%; margin-top: 10px; }
+    nav a { margin-left: 0; margin-right: 18px; }
+    .stat { width: 50%; padding-bottom: 18px; }
+    .skills div { width: 100%; }
+    .row .when { width: 100%; padding-bottom: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Sulman Malik</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+
+    <div class="hero">
+      <p class="eyebrow">Tech Lead &amp; Engineering Manager &middot; Lahore, Pakistan</p>
+      <h1>Engineering leader building AI-powered products on mobile.</h1>
+      <p class="lede">Tech Lead at Beyond Apps Group. Published ML researcher. More than ten years in software, across machine learning, NLP and iOS.</p>
+      <a class="btn" href="https://www.linkedin.com/in/sulman-malik-2015/">Connect on LinkedIn</a>
+      <a class="btn ghost" href="#work">See the work</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>10+</b><span>years in software</span></div>
+      <div class="stat"><b>7&ndash;9</b><span>engineers led today</span></div>
+      <div class="stat"><b>30+</b><span>projects delivered</span></div>
+      <div class="stat"><b>30,000+</b><span>calls tagged a day by my models</span></div>
+    </div>
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>I lead engineering teams that ship AI-powered products, and I still work hands-on in both machine learning and iOS. My background is half ML and NLP, half mobile engineering, and I work best where the two meet.</p>
+      <p>Today I lead the team behind MyZesty, an AI video and photo editor with millions of downloads. Before that I built NLP models that run in daily production for a US call-analytics client, work that became a peer-reviewed paper.</p>
+      <p>I use AI coding agents every day and coach teams to adopt them.</p>
+    </section>
+
+    <section id="work">
+      <h2>Selected work</h2>
+
+      <div class="card">
+        <span class="tag">NLP in production</span>
+        <h3>From 100+ agents to 4</h3>
+        <p>A US call-analytics client relied on more than 100 agents to listen to calls and tag them by hand. As ML engineer in a team of six, I built multi-label classification models with PyTorch and Transformers, plus the pipelines to clean data, train and deploy them.</p>
+        <p>The models are served on AWS: SageMaker for training and hosting, and a Lambda function that calls several model endpoints in parallel and returns one response through API Gateway.</p>
+        <p class="result"><b>Result:</b> 30,000+ calls tagged a day for 100+ companies. The manual operation became 4 people monitoring model quality.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">iOS media engineering</span>
+        <h3>No more wrong frames in a live video editor</h3>
+        <p>On MyZesty, scrubbing the timeline could show a frame that did not match the playhead. I redesigned seek and play in the Metal texture provider on a single serial queue, rewrote the video-seek logic on an operation queue, and synchronised three linked timeline scroll views with the player using Combine.</p>
+        <p class="result"><b>Result:</b> seamless scrubbing and correct frames, alongside fixes for AVFoundation crashes and UI hangs.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag">Engineering leadership</span>
+        <h3>AI coding agents in a real team</h3>
+        <p>I brought AI coding agents into the daily work of a team of 7&ndash;9 engineers, for planning, development and code review, and helped neighbouring teams adopt the same way of working.</p>
+        <p class="result"><b>Also shipped with this team:</b> multilingual AI captions, prompt-based AI music, AI background removal, text-to-video and chat-based media editing, across 5+ quarterly releases delivered on schedule.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="row">
+        <div class="when">Aug 2023 &ndash; Present</div>
+        <div class="what"><b>Tech Lead ML-NLP | AWS | iOS</b><span>Beyond Apps Group, Lahore. Leading MyZesty: architecture, performance and delivery.</span></div>
+      </div>
+      <div class="row">
+        <div class="when">Jun 2021 &ndash; Jul 2023</div>
+        <div class="what"><b>Technical Lead - iOS | Projects Head</b><span>Coding Pixel. Led OpenBorders, a US immigration platform delivered on iOS, Android, tablet, desktop and web from one shared backend.</span></div>
+      </div>
+      <div class="row">
+        <div class="when">Sep 2019 &ndash; May 2021</div>
+        <div class="what"><b>Team Lead (iOS), ML Engineer, Cloud Engineer (AWS)</b><span>Senarios, Lahore. Call classification, sentiment analysis, keyword tagging and topic modelling, served on AWS.</span></div>
+      </div>
+      <div class="row">
+        <div class="when">Mar 2017 &ndash; Sep 2019</div>
+        <div class="what"><b>Software Engineer (iOS)</b><span>Senarios, Lahore. Built and shipped iOS applications with ML features.</span></div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="paper">
+        <p><b>Classification of Call Transcriptions</b></p>
+        <p class="meta">Malik, S. et al. VAWKUM Transactions on Computer Sciences, Vol. 11, No. 2 (2023), pp. 18&ndash;34.</p>
+        <p>A multi-label deep-learning approach to tagging call transcripts, with precision, recall and F1 above 80%.</p>
+        <p><a href="https://doi.org/10.21015/vtcs.v11i2.1591">Read the paper (DOI 10.21015/vtcs.v11i2.1591)</a></p>
+      </div>
+      <p style="margin-top:22px;color:var(--muted);font-size:15px;max-width:680px;">MPhil in Computer Science and M.Sc. in Computer Science, University of the Punjab, Lahore.</p>
+    </section>
+
+    <section id="skills">
+      <h2>What I work with</h2>
+      <div class="skills">
+        <div><b>Machine learning &amp; NLP</b><span>PyTorch, Transformers, text classification, speech-to-text, LLMs and RAG with vector databases</span></div>
+        <div><b>iOS</b><span>Swift, SwiftUI, Combine, Metal, AVFoundation, AVAudioEngine, VideoToolbox</span></div>
+        <div><b>Cloud</b><span>AWS SageMaker, Lambda, API Gateway, DynamoDB, S3, SQS, CloudWatch, IAM</span></div>
+      </div>
+    </section>
+
+    <section id="speaking">
+      <h2>Speaking</h2>
+      <p style="max-width:680px;margin:0 0 14px;">I am available for meetup talks, university sessions and podcasts, in English or Urdu. Topics I can speak on:</p>
+      <ul class="topics">
+        <li>Putting an NLP model into daily production, and keeping it there</li>
+        <li>Shipping AI features inside mobile apps</li>
+        <li>Leading a team that works with AI coding agents</li>
+      </ul>
+    </section>
+
+    <div class="contact" id="contact">
+      <h2>Get in touch</h2>
+      <p>I am open to AI/ML leadership roles and to conversations about applied AI on mobile. LinkedIn is the best way to reach me.</p>
+      <a class="btn" href="https://www.linkedin.com/in/sulman-malik-2015/">Message me on LinkedIn</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Sulman Malik. Lahore, Pakistan.</div>
+</footer>
+
+</body>
+</html>
